@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="text-center text-primary">Free Natal Chart Blog</h1>
-
 {% for page in section.pages %}
 <section>
   <h2><a href="{{ page.permalink | safe }}">{{ page.title }}</a></h2>
