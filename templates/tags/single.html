@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>All posts tagged <span class="text-primary text-muted">{{term.name}}</span></h1> 
+<a href="{{get_url(path="/tags")}}">See all tags</a> 
+
+<ul>
+{% for page in term.pages %}
+ <li><a href="{{page.permalink | safe}}">{{page.title}} ({{page.date}})</a></li>
+{% endfor %}
+</ul>
+
+{% endblock content%}
