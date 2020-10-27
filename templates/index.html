@@ -14,7 +14,7 @@
     {% endif %}   
   </p>
   {{page.summary | safe }}
-  <a href="{{ page.permalink }}#continue-reading">Read more</a>
+  <a href="{{ page.permalink | safe }}#continue-reading">Read more</a>
 </section>
 {% endfor %}
 {% endblock content%}
